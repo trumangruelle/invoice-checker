@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Invoice review report</title>
+<style>
+:root { color-scheme: light; --ink: #1d2433; --muted: #5b6475; --line: #e2e5eb; --page: #f5f6f8;
+  --card: #ffffff; --pass: #1c7348; --pass-bg: #e5f3eb; --review: #ad2a1f; --review-bg: #fcebe8;
+  --unread: #825400; --unread-bg: #fdf1d8; --twice: #1f4fa3; --twice-bg: #e6edf9;
+  --approved: #5b3fa3; --approved-bg: #eeeaf8; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--page); color: var(--ink);
+  font: 15px/1.5 "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif; }
+main { max-width: 1000px; margin: 0 auto; padding: 28px 20px 40px; }
+h1 { font-size: 26px; margin: 0 0 2px; }
+h2 { font-size: 18px; margin: 30px 0 12px; }
+.sub { color: var(--muted); margin: 0 0 20px; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; }
+.tile { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 16px; }
+.tile .n { font-size: 27px; font-weight: 700; line-height: 1.2; font-variant-numeric: tabular-nums; }
+.tile .l { color: var(--muted); font-size: 13px; }
+.tile.pass .n { color: var(--pass); }
+.tile.review .n, .tile.money .n { color: var(--review); }
+.tile.unread .n { color: var(--unread); }
+.tile.twice .n { color: var(--twice); }
+.tile.approved .n { color: var(--approved); }
+.label.queue { background: var(--approved-bg); color: var(--approved); }
+.approved-table td:nth-child(5) { color: var(--approved); font-weight: 600; }
+.tiles.money-row { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); margin-top: 12px; }
+.card { background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--review);
+  border-radius: 8px; padding: 12px 16px; margin-bottom: 10px; }
+.head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.file { font-weight: 600; }
+.facts { color: var(--muted); font-size: 13.5px; }
+.over { background: var(--review-bg); color: var(--review); font-weight: 600; font-size: 13px;
+  border-radius: 999px; padding: 2px 10px; white-space: nowrap; }
+.over.twice { background: var(--twice-bg); color: var(--twice); }
+ul.reasons { list-style: none; margin: 8px 0 0; padding: 0; }
+ul.reasons li { margin: 5px 0; }
+.label { display: inline-block; background: var(--review-bg); color: var(--review); font-weight: 600;
+  font-size: 12.5px; border-radius: 4px; padding: 1px 8px; margin-right: 6px; }
+code { font: 12px Consolas, "SF Mono", Menlo, monospace; color: var(--muted); }
+table { width: 100%; border-collapse: collapse; background: var(--card); border: 1px solid var(--line); }
+th, td { text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--line); font-size: 14px; }
+th { color: var(--muted); font-weight: 600; font-size: 12.5px; background: #fafbfc; }
+.num { text-align: right; font-variant-numeric: tabular-nums; }
+.ok { color: var(--pass); font-weight: 600; }
+.unread-table td:first-child { color: var(--unread); font-weight: 600; }
+.none { color: var(--muted); }
+details { margin-top: 30px; color: var(--muted); font-size: 14px; }
+summary { cursor: pointer; font-weight: 600; color: var(--ink); }
+footer { color: var(--muted); font-size: 13px; margin-top: 24px; }
+</style></head><body><main>
+<h1>Invoice review report</h1>
+<p class="sub">10 invoices from <b>samples</b> &middot; dates checked against 2026-09-21 &middot; extractor: rules</p>
+<div class="tiles">
+<div class="tile "><div class="n">10</div><div class="l">invoices checked</div></div>
+<div class="tile pass"><div class="n">3</div><div class="l">passed, ready to import</div></div>
+<div class="tile review"><div class="n">7</div><div class="l">held for review ($6,643.95)</div></div>
+<div class="tile "><div class="n">0</div><div class="l">files not checked</div></div>
+</div>
+<div class="tiles money-row">
+<div class="tile money"><div class="n">$34.00</div><div class="l">overbilling found (arithmetic errors)</div></div>
+<div class="tile twice"><div class="n">$1,197.00</div><div class="l">1 invoice sent twice, held so it is not paid twice</div></div>
+</div>
+<h2>Needs a human (7)</h2>
+<div class="card"><div class="head"><div><div class="file">bramblewood_BP-10437.txt</div><div class="facts">Bramblewood Paper Co. &middot; invoice BP-10437 &middot; 2026-08-17 &middot; total $1,095.45</div></div><span class="over">Overbilled by $9.00</span></div><ul class="reasons"><li><span class="label">Items don&#x27;t add up</span>Line items add up to $1,012.40 but the subtotal says $1,021.40 (off by $9.00). <code>lines_sum</code></li></ul></div>
+<div class="card"><div class="head"><div><div class="file">kestrel_KR-2304.txt</div><div class="facts">Kestrelrook IT Services &middot; invoice KR-2304 &middot; 2026-08-25 &middot; total $633.34</div></div><span class="over">Overbilled by $15.00</span></div><ul class="reasons"><li><span class="label">Line total is wrong</span>Item 1 (&#x27;Managed support, per seat&#x27;): 12 x $35.00 = $420.00, but the line shows $435.00 (off by $15.00). <code>line_math</code></li></ul></div>
+<div class="card"><div class="head"><div><div class="file">kestrel_KR-2310.txt</div><div class="facts">Kestrelrook IT Services &middot; invoice KR-2310 &middot; 2062-09-18 &middot; total $792.88</div></div></div><ul class="reasons"><li><span class="label">Date in the future</span>Invoice date 2062-09-18 is in the future (checked against 2026-09-21); check the year for a typo. <code>date_future</code></li><li><span class="label">Due before it was issued</span>Due date 2026-10-18 is before the invoice date 2062-09-18. <code>due_before_issue</code></li></ul></div>
+<div class="card"><div class="head"><div><div class="file">lanternfish_LF-0091.html</div><div class="facts">Lanternfish Catering LLC &middot; invoice LF-0091 &middot; 2026-09-02 &middot; total $735.48</div></div></div><ul class="reasons"><li><span class="label">Tax doesn&#x27;t match its rate</span>Tax is $54.48, but 8.875% of the $681.00 subtotal is $60.44 (off by $5.96). <code>tax_rate</code></li></ul></div>
+<div class="card"><div class="head"><div><div class="file">mossgate_MG-5498.html</div><div class="facts">Mossgate Janitorial Services &middot; invoice MG-5498 &middot; 2026-07-31 &middot; total $992.80</div></div><span class="over">Overbilled by $10.00</span></div><ul class="reasons"><li><span class="label">Total is wrong</span>Subtotal $936.00 + tax $46.80 = $982.80, but the total says $992.80 (off by $10.00). <code>total_math</code></li></ul></div>
+<div class="card"><div class="head"><div><div class="file">mossgate_MG-5512.html</div><div class="facts">Mossgate Janitorial Services &middot; invoice MG-5512 &middot; 2026-08-14 &middot; total $1,197.00</div></div></div><ul class="reasons"><li><span class="label">Sent twice</span>Invoice number MG-5512 from Mossgate Janitorial Services also appears in mossgate_MG-5512_reminder.html; paying both would pay it twice. <code>duplicate_number</code></li></ul></div>
+<div class="card"><div class="head"><div><div class="file">mossgate_MG-5512_reminder.html</div><div class="facts">Mossgate Janitorial Services &middot; invoice MG-5512 &middot; 2026-08-14 &middot; total $1,197.00</div></div><span class="over twice">Second copy of a $1,197.00 invoice</span></div><ul class="reasons"><li><span class="label">Sent twice</span>Invoice number MG-5512 from Mossgate Janitorial Services also appears in mossgate_MG-5512.html; paying both would pay it twice. <code>duplicate_number</code></li></ul></div>
+<h2>Not checked (0)</h2>
+<p class="none">Every file in the folder was read.</p>
+<h2>Passed (3)</h2>
+<table><tr><th>File</th><th>Vendor</th><th>Invoice</th><th>Date</th><th class="num">Lines</th><th class="num">Total</th></tr>
+<tr><td class="ok">bramblewood_BP-10421.txt</td><td>Bramblewood Paper Co.</td><td>BP-10421</td><td>2026-08-03</td><td class="num">4</td><td class="num">$435.76</td></tr>
+<tr><td class="ok">kestrel_KR-2291.txt</td><td>Kestrelrook IT Services</td><td>KR-2291</td><td>2026-08-11</td><td class="num">4</td><td class="num">$889.85</td></tr>
+<tr><td class="ok">lanternfish_LF-0087.html</td><td>Lanternfish Catering LLC</td><td>LF-0087</td><td>2026-08-20</td><td class="num">4</td><td class="num">$1,350.05</td></tr>
+</table>
+<details><summary>What every invoice was checked for (16 checks)</summary><ul>
+<li><b>Not fully read</b> <code>extraction</code>: the extractor recognised the layout and read every item row</li>
+<li><b>Details missing</b> <code>required_fields</code>: vendor, invoice number, invoice date, at least one line item and a total are present</li>
+<li><b>Line incomplete</b> <code>line_incomplete</code>: every line item has an amount, and a quantity and unit price either both or neither</li>
+<li><b>Line total is wrong</b> <code>line_math</code>: quantity x unit price = line amount, within a cent (when both are printed)</li>
+<li><b>Items don&#x27;t add up</b> <code>lines_sum</code>: the line amounts add up to the subtotal, within a cent (to total minus tax when no subtotal is printed)</li>
+<li><b>Tax doesn&#x27;t match its rate</b> <code>tax_rate</code>: when a tax rate is printed, tax = rate x subtotal (a cent of rounding allowed per two lines)</li>
+<li><b>Total is wrong</b> <code>total_math</code>: subtotal + tax = total, within a cent</li>
+<li><b>Zero or negative total</b> <code>total_not_positive</code>: the total is above zero (credit notes and refunds are left to a person)</li>
+<li><b>Date in the future</b> <code>date_future</code>: the invoice date is not after the run date</li>
+<li><b>Very old invoice</b> <code>date_stale</code>: the invoice date is not older than --max-age-days (365 by default; 0 turns this off)</li>
+<li><b>Due date unreadable</b> <code>date_unreadable</code>: a printed due date can be read as a date</li>
+<li><b>Due before it was issued</b> <code>due_before_issue</code>: the due date is not before the invoice date</li>
+<li><b>Sent twice</b> <code>duplicate_number</code>: no other file in the batch has the same vendor and invoice number</li>
+<li><b>May be a duplicate</b> <code>possible_duplicate</code>: no other file has the same vendor, date and total under a different invoice number, or the same invoice number with the same total or date under a different vendor name</li>
+<li><b>Seen in an earlier run</b> <code>already_seen</code>: the vendor and invoice number are not in the --history file of earlier runs</li>
+<li><b>Number not on the page</b> <code>not_in_source</code>: (AI extraction only) every amount and the invoice number appear in the source document</li>
+</ul></details>
+<footer>Only PASS invoices are in import_ready.csv. Every other file is listed above with its reason.</footer>
+</main></body></html>

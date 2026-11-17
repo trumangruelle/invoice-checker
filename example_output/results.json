@@ -1,0 +1,577 @@
+{
+  "checked_against_date": "2026-09-21",
+  "input": "samples",
+  "extractor": "rules",
+  "counts": {
+    "PASS": 3,
+    "APPROVED": 0,
+    "NEEDS REVIEW": 7,
+    "NOT CHECKED": 0
+  },
+  "money": {
+    "held_for_review_total": "6643.95",
+    "overbilling_found": "34.00",
+    "sent_twice_copies": 1,
+    "sent_twice_total": "1197.00",
+    "approved_invoices": 0,
+    "approved_total": "0.00",
+    "approved_overbilling": "0.00"
+  },
+  "invoices": [
+    {
+      "status": "PASS",
+      "overbilled": "0.00",
+      "sent_twice_amount": "0.00",
+      "content_hash": "00bcd8a17c6b1895db31352185a1f466b123db3d94a868adfaf3968fa6bc4092",
+      "approval": null,
+      "approval_note": null,
+      "findings": [],
+      "invoice": {
+        "source_file": "bramblewood_BP-10421.txt",
+        "layout": "text-columns",
+        "extractor": "rules",
+        "vendor": "Bramblewood Paper Co.",
+        "invoice_number": "BP-10421",
+        "invoice_date": "2026-08-03",
+        "due_date": "2026-09-02",
+        "currency": "USD",
+        "line_items": [
+          {
+            "description": "Copy paper, letter, 10-ream case",
+            "quantity": "6",
+            "unit_price": "42.50",
+            "amount": "255.00",
+            "source_line": 15
+          },
+          {
+            "description": "Recycled kraft envelopes, box of 500",
+            "quantity": "2",
+            "unit_price": "31.75",
+            "amount": "63.50",
+            "source_line": 16
+          },
+          {
+            "description": "Heavyweight cardstock, 250 sheets (white, 110 lb)",
+            "quantity": "4",
+            "unit_price": "18.20",
+            "amount": "72.80",
+            "source_line": 17
+          },
+          {
+            "description": "Delivery",
+            "quantity": "1",
+            "unit_price": "15.00",
+            "amount": "15.00",
+            "source_line": 19
+          }
+        ],
+        "subtotal": "406.30",
+        "tax": "29.46",
+        "tax_rate_percent": "7.25",
+        "total": "435.76",
+        "warnings": []
+      }
+    },
+    {
+      "status": "NEEDS REVIEW",
+      "overbilled": "9.00",
+      "sent_twice_amount": "0.00",
+      "content_hash": "bd73a0951e06c7eef978d12d97292a73f4747ef9861ab93f9bf390d0f7f2c43a",
+      "approval": null,
+      "approval_note": null,
+      "findings": [
+        {
+          "check": "lines_sum",
+          "label": "items don't add up",
+          "message": "Line items add up to $1,012.40 but the subtotal says $1,021.40 (off by $9.00).",
+          "overcharge": "9.00",
+          "sent_twice_amount": null
+        }
+      ],
+      "invoice": {
+        "source_file": "bramblewood_BP-10437.txt",
+        "layout": "text-columns",
+        "extractor": "rules",
+        "vendor": "Bramblewood Paper Co.",
+        "invoice_number": "BP-10437",
+        "invoice_date": "2026-08-17",
+        "due_date": "2026-09-16",
+        "currency": "USD",
+        "line_items": [
+          {
+            "description": "Copy paper, letter, 10-ream case",
+            "quantity": "12",
+            "unit_price": "42.50",
+            "amount": "510.00",
+            "source_line": 15
+          },
+          {
+            "description": "Toner cartridge, black, high yield",
+            "quantity": "3",
+            "unit_price": "89.90",
+            "amount": "269.70",
+            "source_line": 16
+          },
+          {
+            "description": "Archive storage boxes, 10-pack",
+            "quantity": "5",
+            "unit_price": "24.54",
+            "amount": "122.70",
+            "source_line": 17
+          },
+          {
+            "description": "Desk organiser, walnut finish",
+            "quantity": "4",
+            "unit_price": "27.50",
+            "amount": "110.00",
+            "source_line": 18
+          }
+        ],
+        "subtotal": "1021.40",
+        "tax": "74.05",
+        "tax_rate_percent": "7.25",
+        "total": "1095.45",
+        "warnings": []
+      }
+    },
+    {
+      "status": "PASS",
+      "overbilled": "0.00",
+      "sent_twice_amount": "0.00",
+      "content_hash": "cf082e2634b014fb090f5fb12d3e1ad0a9b3038230e2b711cae374f86ada5b82",
+      "approval": null,
+      "approval_note": null,
+      "findings": [],
+      "invoice": {
+        "source_file": "kestrel_KR-2291.txt",
+        "layout": "text-pipe-table",
+        "extractor": "rules",
+        "vendor": "Kestrelrook IT Services",
+        "invoice_number": "KR-2291",
+        "invoice_date": "2026-08-11",
+        "due_date": "2026-09-10",
+        "currency": "USD",
+        "line_items": [
+          {
+            "description": "Managed support, per seat",
+            "quantity": "14",
+            "unit_price": "35.00",
+            "amount": "490.00",
+            "source_line": 12
+          },
+          {
+            "description": "Cloud backup, 500 GB",
+            "quantity": "2",
+            "unit_price": "19.99",
+            "amount": "39.98",
+            "source_line": 13
+          },
+          {
+            "description": "Replacement keyboard",
+            "quantity": "3",
+            "unit_price": "24.00",
+            "amount": "72.00",
+            "source_line": 14
+          },
+          {
+            "description": "On-site labour (hours)",
+            "quantity": "2.5",
+            "unit_price": "95.00",
+            "amount": "237.50",
+            "source_line": 15
+          }
+        ],
+        "subtotal": "839.48",
+        "tax": "50.37",
+        "tax_rate_percent": "6",
+        "total": "889.85",
+        "warnings": []
+      }
+    },
+    {
+      "status": "NEEDS REVIEW",
+      "overbilled": "15.00",
+      "sent_twice_amount": "0.00",
+      "content_hash": "eff2ac6446b2da1958f9dc8202167dc246020521977130b330f5455122b12168",
+      "approval": null,
+      "approval_note": null,
+      "findings": [
+        {
+          "check": "line_math",
+          "label": "line total is wrong",
+          "message": "Item 1 ('Managed support, per seat'): 12 x $35.00 = $420.00, but the line shows $435.00 (off by $15.00).",
+          "overcharge": "15.00",
+          "sent_twice_amount": null
+        }
+      ],
+      "invoice": {
+        "source_file": "kestrel_KR-2304.txt",
+        "layout": "text-pipe-table",
+        "extractor": "rules",
+        "vendor": "Kestrelrook IT Services",
+        "invoice_number": "KR-2304",
+        "invoice_date": "2026-08-25",
+        "due_date": "2026-09-24",
+        "currency": "USD",
+        "line_items": [
+          {
+            "description": "Managed support, per seat",
+            "quantity": "12",
+            "unit_price": "35.00",
+            "amount": "435.00",
+            "source_line": 12
+          },
+          {
+            "description": "Cloud backup, 500 GB",
+            "quantity": "1",
+            "unit_price": "19.99",
+            "amount": "19.99",
+            "source_line": 13
+          },
+          {
+            "description": "On-site labour (hours)",
+            "quantity": "1.5",
+            "unit_price": "95.00",
+            "amount": "142.50",
+            "source_line": 14
+          }
+        ],
+        "subtotal": "597.49",
+        "tax": "35.85",
+        "tax_rate_percent": "6",
+        "total": "633.34",
+        "warnings": []
+      }
+    },
+    {
+      "status": "NEEDS REVIEW",
+      "overbilled": "0.00",
+      "sent_twice_amount": "0.00",
+      "content_hash": "8a7d65a6f729efca11b1463e95eebaf5bf130f3ddb4fca283d20328db54b7db0",
+      "approval": null,
+      "approval_note": null,
+      "findings": [
+        {
+          "check": "date_future",
+          "label": "date in the future",
+          "message": "Invoice date 2062-09-18 is in the future (checked against 2026-09-21); check the year for a typo.",
+          "overcharge": null,
+          "sent_twice_amount": null
+        },
+        {
+          "check": "due_before_issue",
+          "label": "due before it was issued",
+          "message": "Due date 2026-10-18 is before the invoice date 2062-09-18.",
+          "overcharge": null,
+          "sent_twice_amount": null
+        }
+      ],
+      "invoice": {
+        "source_file": "kestrel_KR-2310.txt",
+        "layout": "text-pipe-table",
+        "extractor": "rules",
+        "vendor": "Kestrelrook IT Services",
+        "invoice_number": "KR-2310",
+        "invoice_date": "2062-09-18",
+        "due_date": "2026-10-18",
+        "currency": "USD",
+        "line_items": [
+          {
+            "description": "Managed support, per seat",
+            "quantity": "14",
+            "unit_price": "35.00",
+            "amount": "490.00",
+            "source_line": 12
+          },
+          {
+            "description": "USB-C docking station",
+            "quantity": "2",
+            "unit_price": "129.00",
+            "amount": "258.00",
+            "source_line": 13
+          }
+        ],
+        "subtotal": "748.00",
+        "tax": "44.88",
+        "tax_rate_percent": "6",
+        "total": "792.88",
+        "warnings": []
+      }
+    },
+    {
+      "status": "PASS",
+      "overbilled": "0.00",
+      "sent_twice_amount": "0.00",
+      "content_hash": "0b2c73a50cd8ba4293a6be7bd9d8343c969d23cef53884962020a4308a898744",
+      "approval": null,
+      "approval_note": null,
+      "findings": [],
+      "invoice": {
+        "source_file": "lanternfish_LF-0087.html",
+        "layout": "html-table",
+        "extractor": "rules",
+        "vendor": "Lanternfish Catering LLC",
+        "invoice_number": "LF-0087",
+        "invoice_date": "2026-08-20",
+        "due_date": "2026-09-19",
+        "currency": "USD",
+        "line_items": [
+          {
+            "description": "Buffet lunch, per guest",
+            "quantity": "45",
+            "unit_price": "18.50",
+            "amount": "832.50",
+            "source_line": 1
+          },
+          {
+            "description": "Coffee & tea service, per guest",
+            "quantity": "45",
+            "unit_price": "3.50",
+            "amount": "157.50",
+            "source_line": 2
+          },
+          {
+            "description": "Dessert platter",
+            "quantity": "5",
+            "unit_price": "38.00",
+            "amount": "190.00",
+            "source_line": 3
+          },
+          {
+            "description": "Serving staff (hours)",
+            "quantity": "4",
+            "unit_price": "15.00",
+            "amount": "60.00",
+            "source_line": 4
+          }
+        ],
+        "subtotal": "1240.00",
+        "tax": "110.05",
+        "tax_rate_percent": "8.875",
+        "total": "1350.05",
+        "warnings": []
+      }
+    },
+    {
+      "status": "NEEDS REVIEW",
+      "overbilled": "0.00",
+      "sent_twice_amount": "0.00",
+      "content_hash": "6e9835bae8e5a759fc1b74cf9711ea7f03180f3f0088e51b751e2dfe5932e077",
+      "approval": null,
+      "approval_note": null,
+      "findings": [
+        {
+          "check": "tax_rate",
+          "label": "tax doesn't match its rate",
+          "message": "Tax is $54.48, but 8.875% of the $681.00 subtotal is $60.44 (off by $5.96).",
+          "overcharge": "-5.96",
+          "sent_twice_amount": null
+        }
+      ],
+      "invoice": {
+        "source_file": "lanternfish_LF-0091.html",
+        "layout": "html-table",
+        "extractor": "rules",
+        "vendor": "Lanternfish Catering LLC",
+        "invoice_number": "LF-0091",
+        "invoice_date": "2026-09-02",
+        "due_date": "2026-10-02",
+        "currency": "USD",
+        "line_items": [
+          {
+            "description": "Boxed lunch, assorted",
+            "quantity": "30",
+            "unit_price": "14.25",
+            "amount": "427.50",
+            "source_line": 1
+          },
+          {
+            "description": "Seasonal fruit platter",
+            "quantity": "3",
+            "unit_price": "42.00",
+            "amount": "126.00",
+            "source_line": 2
+          },
+          {
+            "description": "Beverage service, per guest",
+            "quantity": "30",
+            "unit_price": "2.75",
+            "amount": "82.50",
+            "source_line": 3
+          },
+          {
+            "description": "Delivery & setup",
+            "quantity": "1",
+            "unit_price": "45.00",
+            "amount": "45.00",
+            "source_line": 4
+          }
+        ],
+        "subtotal": "681.00",
+        "tax": "54.48",
+        "tax_rate_percent": "8.875",
+        "total": "735.48",
+        "warnings": []
+      }
+    },
+    {
+      "status": "NEEDS REVIEW",
+      "overbilled": "10.00",
+      "sent_twice_amount": "0.00",
+      "content_hash": "ec663044bcc85ca4c1a7082a5ce7c35d7bc7a1ce7eb5ac93f9a119e3f1562168",
+      "approval": null,
+      "approval_note": null,
+      "findings": [
+        {
+          "check": "total_math",
+          "label": "total is wrong",
+          "message": "Subtotal $936.00 + tax $46.80 = $982.80, but the total says $992.80 (off by $10.00).",
+          "overcharge": "10.00",
+          "sent_twice_amount": null
+        }
+      ],
+      "invoice": {
+        "source_file": "mossgate_MG-5498.html",
+        "layout": "html-list",
+        "extractor": "rules",
+        "vendor": "Mossgate Janitorial Services",
+        "invoice_number": "MG-5498",
+        "invoice_date": "2026-07-31",
+        "due_date": "2026-08-14",
+        "currency": "USD",
+        "line_items": [
+          {
+            "description": "Nightly office clean (weekly block)",
+            "quantity": "4",
+            "unit_price": "210.00",
+            "amount": "840.00",
+            "source_line": 1
+          },
+          {
+            "description": "Window cleaning, ground floor",
+            "quantity": "2",
+            "unit_price": "48.00",
+            "amount": "96.00",
+            "source_line": 2
+          }
+        ],
+        "subtotal": "936.00",
+        "tax": "46.80",
+        "tax_rate_percent": "5",
+        "total": "992.80",
+        "warnings": []
+      }
+    },
+    {
+      "status": "NEEDS REVIEW",
+      "overbilled": "0.00",
+      "sent_twice_amount": "0.00",
+      "content_hash": "40796e87ff60d62facfda75faa7d848a5beec25fd2b019905db124320497826b",
+      "approval": null,
+      "approval_note": null,
+      "findings": [
+        {
+          "check": "duplicate_number",
+          "label": "sent twice",
+          "message": "Invoice number MG-5512 from Mossgate Janitorial Services also appears in mossgate_MG-5512_reminder.html; paying both would pay it twice.",
+          "overcharge": null,
+          "sent_twice_amount": null
+        }
+      ],
+      "invoice": {
+        "source_file": "mossgate_MG-5512.html",
+        "layout": "html-list",
+        "extractor": "rules",
+        "vendor": "Mossgate Janitorial Services",
+        "invoice_number": "MG-5512",
+        "invoice_date": "2026-08-14",
+        "due_date": "2026-08-28",
+        "currency": "USD",
+        "line_items": [
+          {
+            "description": "Nightly office clean (weekly block)",
+            "quantity": "4",
+            "unit_price": "210.00",
+            "amount": "840.00",
+            "source_line": 1
+          },
+          {
+            "description": "Carpet shampoo, reception",
+            "quantity": "1",
+            "unit_price": "165.00",
+            "amount": "165.00",
+            "source_line": 2
+          },
+          {
+            "description": "Restroom supplies restock",
+            "quantity": "6",
+            "unit_price": "22.50",
+            "amount": "135.00",
+            "source_line": 3
+          }
+        ],
+        "subtotal": "1140.00",
+        "tax": "57.00",
+        "tax_rate_percent": "5",
+        "total": "1197.00",
+        "warnings": []
+      }
+    },
+    {
+      "status": "NEEDS REVIEW",
+      "overbilled": "0.00",
+      "sent_twice_amount": "1197.00",
+      "content_hash": "40796e87ff60d62facfda75faa7d848a5beec25fd2b019905db124320497826b",
+      "approval": null,
+      "approval_note": null,
+      "findings": [
+        {
+          "check": "duplicate_number",
+          "label": "sent twice",
+          "message": "Invoice number MG-5512 from Mossgate Janitorial Services also appears in mossgate_MG-5512.html; paying both would pay it twice.",
+          "overcharge": null,
+          "sent_twice_amount": "1197.00"
+        }
+      ],
+      "invoice": {
+        "source_file": "mossgate_MG-5512_reminder.html",
+        "layout": "html-list",
+        "extractor": "rules",
+        "vendor": "Mossgate Janitorial Services",
+        "invoice_number": "MG-5512",
+        "invoice_date": "2026-08-14",
+        "due_date": "2026-08-28",
+        "currency": "USD",
+        "line_items": [
+          {
+            "description": "Nightly office clean (weekly block)",
+            "quantity": "4",
+            "unit_price": "210.00",
+            "amount": "840.00",
+            "source_line": 1
+          },
+          {
+            "description": "Carpet shampoo, reception",
+            "quantity": "1",
+            "unit_price": "165.00",
+            "amount": "165.00",
+            "source_line": 2
+          },
+          {
+            "description": "Restroom supplies restock",
+            "quantity": "6",
+            "unit_price": "22.50",
+            "amount": "135.00",
+            "source_line": 3
+          }
+        ],
+        "subtotal": "1140.00",
+        "tax": "57.00",
+        "tax_rate_percent": "5",
+        "total": "1197.00",
+        "warnings": []
+      }
+    }
+  ],
+  "not_checked": []
+}

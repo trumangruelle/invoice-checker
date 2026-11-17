@@ -1,0 +1,20 @@
+Kestrelrook IT Services
+Managed support for small offices
+=================================================
+INVOICE #: KR-2304
+Invoice Date: 08/25/2026
+Payment Due: 09/24/2026
+Customer: Thimbleburrow Veterinary Clinic
+=================================================
+
+| SKU    | Item                       | Qty | Rate    | Line Total |
+|--------|----------------------------|-----|---------|------------|
+| MS-100 | Managed support, per seat  | 12  | $35.00  | $435.00    |
+| BK-020 | Cloud backup, 500 GB       | 1   | $19.99  | $19.99     |
+| LB-001 | On-site labour (hours)     | 1.5 | $95.00  | $142.50    |
+
+SUBTOTAL:              $597.49
+SALES TAX (6%):         $35.85
+AMOUNT DUE:            $633.34
+
+Please quote the invoice number with your payment.

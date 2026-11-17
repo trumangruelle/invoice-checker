@@ -1,0 +1,15 @@
+{
+  "template": "Example bill import",
+  "columns": [
+    {"target": "SupplierName", "from": "Vendor"},
+    {"target": "BillNumber", "from": "InvoiceNumber"},
+    {"target": "BillDate", "from": "InvoiceDate"},
+    {"target": "DueDate", "from": "DueDate"},
+    {"target": "LineDescription", "from": "Description"},
+    {"target": "LineQuantity", "from": "Quantity"},
+    {"target": "LineUnitPrice", "from": "UnitPrice"},
+    {"target": "LineAmount", "from": "LineAmount"},
+    {"target": "AccountCode", "value": "6000"},
+    {"target": "TaxCode", "value": "PURCH-STD"}
+  ]
+}

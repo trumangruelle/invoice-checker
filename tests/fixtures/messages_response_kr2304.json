@@ -1,0 +1,26 @@
+{
+  "id": "msg_fixture_kr2304",
+  "type": "message",
+  "role": "assistant",
+  "model": "claude-opus-5",
+  "content": [
+    {
+      "type": "thinking",
+      "thinking": "",
+      "signature": "fixture-signature-not-real"
+    },
+    {
+      "type": "text",
+      "text": "{\n  \"vendor\": \"Kestrelrook IT Services\",\n  \"invoice_number\": \"KR-2304\",\n  \"invoice_date\": \"2026-08-25\",\n  \"due_date\": \"2026-09-24\",\n  \"currency\": \"USD\",\n  \"line_items\": [\n    {\n      \"description\": \"Managed support, per seat\",\n      \"quantity\": \"12\",\n      \"unit_price\": \"35.00\",\n      \"amount\": \"435.00\"\n    },\n    {\n      \"description\": \"Cloud backup, 500 GB\",\n      \"quantity\": \"1\",\n      \"unit_price\": \"19.99\",\n      \"amount\": \"19.99\"\n    },\n    {\n      \"description\": \"On-site labour (hours)\",\n      \"quantity\": \"1.5\",\n      \"unit_price\": \"95.00\",\n      \"amount\": \"142.50\"\n    }\n  ],\n  \"subtotal\": \"597.49\",\n  \"tax\": \"35.85\",\n  \"tax_rate_percent\": \"6\",\n  \"total\": \"633.34\"\n}"
+    }
+  ],
+  "stop_reason": "end_turn",
+  "stop_sequence": null,
+  "stop_details": null,
+  "usage": {
+    "input_tokens": 1180,
+    "output_tokens": 300,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0
+  }
+}

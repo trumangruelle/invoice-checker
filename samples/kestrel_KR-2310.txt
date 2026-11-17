@@ -1,0 +1,19 @@
+Kestrelrook IT Services
+Managed support for small offices
+=================================================
+INVOICE #: KR-2310
+Invoice Date: 09/18/2062
+Payment Due: 10/18/2026
+Customer: Thimbleburrow Veterinary Clinic
+=================================================
+
+| SKU    | Item                       | Qty | Rate    | Line Total |
+|--------|----------------------------|-----|---------|------------|
+| MS-100 | Managed support, per seat  | 14  | $35.00  | $490.00    |
+| HW-415 | USB-C docking station      | 2   | $129.00 | $258.00    |
+
+SUBTOTAL:              $748.00
+SALES TAX (6%):         $44.88
+AMOUNT DUE:            $792.88
+
+Please quote the invoice number with your payment.
